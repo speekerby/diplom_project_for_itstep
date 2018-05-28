@@ -14,8 +14,8 @@ class AccountController extends controller
 {
     public function loginAction()
     {
+//        $this->view->redirect('/');
         $this->view->render('Страница Входа');
-
     }
 
     public function registerAction()

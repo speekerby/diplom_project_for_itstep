@@ -2,6 +2,8 @@
 
 namespace application\core;
 
+use application\core\View;
+
 class Router
 {
     protected $routes = [];    //Список всех роутеров
@@ -46,14 +48,14 @@ class Router
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'Не найден action:  ' . $action;
+                    View::errorCode(404);
                 }
 
             } else {
-                echo 'Не найден: ' . $path;
+                View::errorCode(404);
             }
         } else {
-            echo 'Маршрут не найден';
+            View::errorCode(500);
         }
     }
 }
