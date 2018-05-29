@@ -16,13 +16,12 @@ class MainController extends controller
 {
     public function indexAction()
     {
-        $db = new Db();
+        $result = $this->model->getNews();
 
-        $params = [
-            'id' => 5,
+        $vars = [
+            'news' => $result
         ];
-        $data = $db->column('SELECT user FROM users WHERE id=:id', $params);
-        debug($data);
-        $this->view->render('Главная страница');
+
+        $this->view->render('Главная страница', $vars);
     }
 }
