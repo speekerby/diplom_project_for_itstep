@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php echo $content; ?>
-<script src="/public/dist/main.js"></script>
+<script src="/bundle/bundle.js"></script>
 </body>
 </html>
 
