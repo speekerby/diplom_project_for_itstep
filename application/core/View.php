@@ -37,8 +37,8 @@ class View
     //Функция редиректа
     public function redirect($url)
     {
-        header('location: ' . $url);
-        exit();
+        header('location: /' . $url);
+        exit;
     }
 
     //Функия ошибок 404, 403
@@ -51,6 +51,16 @@ class View
             require $path;
         }
         exit();
+    }
+
+    public function message($status, $message)
+    {
+        exit(json_encode(['status' => $status, 'message' => $message]));
+    }
+
+    public function location($url)
+    {
+        exit(json_encode(['url' => $url]));
     }
 
 

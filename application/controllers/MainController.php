@@ -16,12 +16,29 @@ class MainController extends controller
 {
     public function indexAction()
     {
-        $result = $this->model->getNews();
+        $this->view->render('Главная страница');
+    }
 
-        $vars = [
-            'news' => $result
-        ];
+    public function aboutAction()
+    {
+        $this->view->render('О нас');
+    }
 
-        $this->view->render('Главная страница', $vars);
+    public function contactAction()
+    {
+        if (!empty($_POST)) {
+            if (!$this->model->contactValidate($_POST)) {
+                $this->view->message('Error', $this->model->error);
+            }
+            //Отправка сообщение на E-mail
+            mail('vaca@loketa.com', 'Сообщение формы обратной свзяи ITCOMPANY', ',' . $_POST['name'] . ',' . $_POST['email'] . ',' . $_POST['text']);
+            $this->view->message('', 'Сообщение отправлено ');
+        }
+        $this->view->render('Контакты');
+    }
+
+    public function blogAction()
+    {
+        $this->view->render('Блог');
     }
 }

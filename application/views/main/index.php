@@ -1,9 +1,12 @@
-<p>Главная страница</p>
-
-<?php foreach ($news as $value): ?>
-    <h3><?php echo $value['title']; ?></h3>
-    <p><?php echo $value['description']; ?></p>
-    <hr>
-<?php endforeach; ?>
-
-<h1 class="title"></h1>
+<div class="slider_bg" style="background: url('/public/images/bg_slide/bg.jpg');">
+    <div class="wrap_main">
+        <!---start-da-slider----->
+        <div class="da-slide">
+            <h2><span>Test</span></h2>
+            <p>Lorem Ipsum is simply dummy text of the printing industry type specimen book.</p>
+            <a href="#" class="da-link">BUTTON</a>
+            <!--<a href="#portfolio" class="scroll"><span class="da-img"> </span> </a>-->
+        </div>
+        <!---//End-da-slider----->
+    </div>
+</div>

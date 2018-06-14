@@ -1,5 +1,4 @@
 .idea
-bundle/
 node_modules/
-
+build/
 

@@ -5,8 +5,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let conf = {
     entry: './public/index.js',
     output: {
-        path: path.resolve(__dirname, './bundle'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, './build'),
+        filename: 'build.js',
         publicPath: 'bundle/'
     },
     devServer: {
@@ -27,7 +27,7 @@ let conf = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("styles.css"),
+        new ExtractTextPlugin("style.css"),
     ]
 };
 

@@ -2,10 +2,7 @@
 
 return [
     'all' => [
-        'index',
-        'about',
-        'contact',
-        'blog',
+        'login',
     ],
     'authorize' => [
         //
@@ -14,6 +11,10 @@ return [
         //
     ],
     'admin' => [
-        //
+        'posts',
+        'logout',
+        'add',
+        'edit',
+        'delete',
     ],
 ];

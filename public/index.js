@@ -1,11 +1,20 @@
 //JQUERY
 import $ from 'jquery';
-//CSS
+
+
+import './js/form.js';
+
+//Swiper
+// import 'swiper/dist/css/swiper.min.css';
+// import 'swiper/dist/js/swiper.js';
+
+//SCSS
 import './scss/styles.scss'
 
 
-$('.title').html('JQUERY');
-var newOne = () => {
-    console.log("Hello World..!");
-}
-newOne();
+$('.title').html('Logo');
+$('.menu-toggle').click(function () {
+
+    $('.site-nav').toggleClass('site-nav--open', 500);
+    $(this).toggleClass('open');
+})
