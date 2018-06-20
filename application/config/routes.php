@@ -8,7 +8,7 @@ return [
         'controller' => 'main',
         'action' => 'index',
     ],
-    'blog' => [
+    'blog/{id:\d+}' => [
         'controller' => 'main',
         'action' => 'blog',
     ],
@@ -34,7 +34,7 @@ return [
         'controller' => 'admin',
         'action' => 'add',
     ],
-    'admin/edit' => [
+    'admin/edit/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'edit',
     ],
@@ -42,7 +42,7 @@ return [
         'controller' => 'admin',
         'action' => 'posts',
     ],
-    'admin/delete' => [
+    'admin/delete/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'delete',
     ],

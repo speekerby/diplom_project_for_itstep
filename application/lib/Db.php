@@ -17,10 +17,14 @@ class Db
     public function query($sql, $params = [])
     {
         $stmt = $this->db->prepare($sql);
-
         if (!empty($params)) {
             foreach ($params as $key => $val) {
-                $stmt->bindValue(':' . $key, $val);
+                if (is_int($val)) {
+                    $type = PDO::PARAM_INT;
+                } else {
+                    $type = PDO::PARAM_STR;
+                }
+                $stmt->bindValue(':' . $key, $val, $type);
             }
         }
         $stmt->execute();
@@ -29,7 +33,7 @@ class Db
 
     public function row($sql, $params = [])
     {
-        $result = $this->query($sql, $params = []);
+        $result = $this->query($sql, $params);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -38,10 +42,9 @@ class Db
         $result = $this->query($sql, $params);
         return $result->fetchColumn();
     }
+
+    public function lastInsertId()
+    {
+        return $this->db->lastInsertId();
+    }
 }
-/**
- * Created by PhpStorm.
- * User: developer
- * Date: 28.05.2018
- * Time: 14:23
- */
