@@ -32,4 +32,22 @@ class main extends Model
         }
         return true;
     }
+
+    //Получение количество постов из БД
+    public function postsCount()
+    {
+        return $this->db->column('SELECT COUNT(id) FROM posts ');
+    }
+
+
+    public function postsList($route)
+    {
+        $max = 6;  //Максимальное количество записей на странице
+
+        $params = [
+            'max' => $max,
+            'start' => ((($route['page'] ?? 1) - 1) * $max),
+        ];
+        return $this->db->row('SELECT * FROM posts ORDER BY id DESC LIMIT :start, :max ', $params);
+    }
 }

@@ -10,6 +10,8 @@ namespace application\controllers;
 
 
 use application\core\controller;
+use application\lib\Pagination;
+use application\models\main;
 
 class AdminController extends controller
 {
@@ -94,7 +96,13 @@ class AdminController extends controller
 
     public function postsAction()
     {
-        $this->view->render('Посты');
+        $mainModel = new main();
+        $pagination = new Pagination($this->route, $mainModel->postsCount(), 6);
+        $vars = [
+            'pagination' => $pagination->get(),
+            'list' => $mainModel->postsList($this->route)
+        ];
+        $this->view->render('Посты', $vars);
     }
 
     public function deleteAction()

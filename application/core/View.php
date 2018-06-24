@@ -41,7 +41,7 @@ class View
         exit;
     }
 
-    //Функия ошибок 404, 403
+    //Функция ошибок 404, 403
     public static function errorCode($code)
     {
         http_response_code($code);

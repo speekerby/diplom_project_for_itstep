@@ -4,44 +4,25 @@
     </div>
 
     <div class="container-blog">
+        <?php if (empty($list)): ?>
+            <p>Список постов пуст</p>
+        <?php else: ?>
+            <?php foreach ($list as $val): ?>
+        <div class="new">
+            <a href="/post/<?php echo $val['id']; ?>">
+                <img width="250" height="250" src="/public/images/blog/<?php echo $val['id']; ?>.jpg"/>
 
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, labore?</p>
+                <h1><?php echo htmlspecialchars($val['name'], ENT_QUOTES); ?></h1>
+                <p><?php echo htmlspecialchars($val['description'], ENT_QUOTES); ?></p>
+            </a>
+
         </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, unde.</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, praesentium.</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, perferendis.</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, voluptatibus.</p>
-        </div>
+            <?php endforeach; ?>
+            <div class="clearfix">
+                <?php echo $pagination; ?>
+            </div>
+        <?php endif; ?>
+
+
     </div>
 </blog>
-
-<?php
-/**
- * Created by PhpStorm.
- * User: speek
- * Date: 08.06.2018
- * Time: 15:03
- */

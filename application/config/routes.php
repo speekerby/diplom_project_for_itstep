@@ -2,16 +2,15 @@
 
 return [
 
-    //MainController
-    //Главная страница
+    // MainController
     '' => [
         'controller' => 'main',
         'action' => 'index',
     ],
-    'blog/{id:\d+}' => [
-        'controller' => 'main',
-        'action' => 'blog',
-    ],
+//    'main/index/{page:\d+}' => [
+//        'controller' => 'main',
+//        'action' => 'index',
+//    ],
     'about' => [
         'controller' => 'main',
         'action' => 'about',
@@ -19,6 +18,18 @@ return [
     'contact' => [
         'controller' => 'main',
         'action' => 'contact',
+    ],
+    'post/{id:\d+}' => [
+        'controller' => 'main',
+        'action' => 'post',
+    ],
+    'main/blog/{page:\d+}' => [
+        'controller' => 'main',
+        'action' => 'blog',
+    ],
+    'blog' => [
+        'controller' => 'main',
+        'action' => 'blog',
     ],
 
     //AdminController
@@ -37,6 +48,10 @@ return [
     'admin/edit/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'edit',
+    ],
+    'admin/posts/{page:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'posts',
     ],
     'admin/posts' => [
         'controller' => 'admin',

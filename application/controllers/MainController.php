@@ -10,7 +10,8 @@ namespace application\controllers;
 
 
 use application\core\controller;
-use application\lib\Db;
+use application\lib\Pagination;
+use application\models\Admin;
 
 class MainController extends controller
 {
@@ -39,6 +40,25 @@ class MainController extends controller
 
     public function blogAction()
     {
-        $this->view->render('Блог');
+        $pagination = new Pagination($this->route, $this->model->postsCount(), 6);
+        $vars = [
+            'pagination' => $pagination->get(),
+            'list' => $this->model->postsList($this->route)
+        ];
+        $this->view->render('Блог', $vars);
     }
+
+    public function postAction()
+    {
+        $adminModel = new Admin;
+        if (!$adminModel->isPostExists($this->route['id'])) {
+            $this->view->errorCode(404);
+        }
+        $vars = [
+            'data' => $adminModel->postData($this->route['id'])[0],
+        ];
+
+        $this->view->render('Пост', $vars);
+    }
+
 }

@@ -6,6 +6,7 @@ return [
         'about',
         'contact',
         'blog',
+        'post'
     ],
     'authorize' => [
         //

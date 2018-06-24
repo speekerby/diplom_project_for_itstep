@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="/build/style.css">
-
+    <link href="/public/styles/bootstrap.css" rel="stylesheet">
+    <link href="/public/styles/main.css" rel="stylesheet">
     <link href="/public/styles/font-awesome.css" rel="stylesheet">
+
 </head>
 <body>
 <header>
