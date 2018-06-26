@@ -2,7 +2,7 @@
 import $ from 'jquery';
 
 
-import './js/form.js';
+// import './js/form.js';
 
 //Swiper
 // import 'swiper/dist/css/swiper.min.css';

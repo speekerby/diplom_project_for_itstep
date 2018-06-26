@@ -7,7 +7,7 @@ let conf = {
     output: {
         path: path.resolve(__dirname, './build'),
         filename: 'build.js',
-        publicPath: 'bundle/'
+        publicPath: 'build/'
     },
     devServer: {
         overlay: true
@@ -27,7 +27,7 @@ let conf = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("style.css"),
+        new ExtractTextPlugin("styles.css"),
     ]
 };
 

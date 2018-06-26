@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="bundle/styles.css">
+    <link rel="stylesheet" href="build/styles.css">
 
 </head>
 
@@ -46,62 +46,117 @@
     </div>
 </header>
 
-
-<blog>
-    <div style=" text-align: center; background-color: #f6f6f5;">
-        <span style="    font-size: 46px; border-bottom: 6px solid green;">БЛОГ</span>
-    </div>
-
-    <div class="container-blog">
-
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, labore?</p>
+<contact>
+    <div class="container-contact">
+        <div class="contacts">
+            <h1>Контакты:</h1>
+            <hr>
+            <p>22 St. Black Road Raleigh, PA 34578</p>
+            <span>Телефоны:</span>
+            <p><a href="tel:+375 29 370 09 13">+375 29 370 09 13</a></p>
+            <p><a href="tel:+375 25 370 09 13">+375 25 370 09 13</a></p>
+            <p><a href="tel:+375 33 370 09 13">+375 33 370 09 13</a></p>
+            <p>Opening Hours</p>
+            <p> Monday – Friday: 9am-6pm</p>
+            <p> Saturday: 10am-4pm</p>
+            <p>Sunday: 10am-1pm</p>
         </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, unde.</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, praesentium.</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, perferendis.</p>
-        </div>
-        <div class="new">
-            <img src="public/images/itforum.jpg"/>
-            <h1>test</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, voluptatibus.</p>
+        <div class="form-contact">
+            <h1>Свяжись с нами</h1>
+            <hr>
+            <form action="/contact" method="post">
+                <p><input type="text" class="form-control" name="name" placeholder="Имя"></p>
+                <p><input type="text" class="form-control" name="email" placeholder="E-mail"></p>
+                <p><textarea rows="10" class="form-control" name="text" placeholder="Сообщение"></textarea></p>
+                <button type="submit" class="btn-form" id="sendMessageButton">Отправить</button>
+            </form>
         </div>
     </div>
-</blog>
+</contact>
 
-
-<!--<div class="slider_bg" style="background: url('public/images/bg_slide/bg.jpg');">-->
-<!--<div class="wrap">-->
-<!--&lt;!&ndash;-start-da-slider-&#45;&#45;&ndash;&gt;-->
-<!--<div class="da-slide">-->
-<!--<h2><span>Test</span></h2>-->
-<!--<p>Lorem Ipsum is simply dummy text of the printing industry type specimen book.</p>-->
-<!--<a href="#" class="da-link">BUTTON</a>-->
-<!--&lt;!&ndash;<a href="#portfolio" class="scroll"><span class="da-img"> </span> </a>&ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash;-//End-da-slider-&#45;&#45;&ndash;&gt;-->
-<!--</div>-->
+<!--<blog>-->
+<!--<div style=" text-align: center; background-color: #f6f6f5;">-->
+<!--<span style="    font-size: 46px; border-bottom: 6px solid green;">БЛОГ</span>-->
 <!--</div>-->
 
-<script src="bundle/bundle.js"></script>
+<!--<div class="container-blog">-->
+
+<!--<div class="new">-->
+<!--<img src="public/images/itforum.jpg"/>-->
+<!--<h1>test</h1>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, labore?</p>-->
+<!--</div>-->
+<!--<div class="new">-->
+<!--<img src="public/images/itforum.jpg"/>-->
+<!--<h1>test</h1>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, unde.</p>-->
+<!--</div>-->
+<!--<div class="new">-->
+<!--<img src="public/images/itforum.jpg"/>-->
+<!--<h1>test</h1>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, praesentium.</p>-->
+<!--</div>-->
+<!--<div class="new">-->
+<!--<img src="public/images/itforum.jpg"/>-->
+<!--<h1>test</h1>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, minus?</p>-->
+<!--</div>-->
+<!--<div class="new">-->
+<!--<img src="public/images/itforum.jpg"/>-->
+<!--<h1>test</h1>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, perferendis.</p>-->
+<!--</div>-->
+<!--<div class="new">-->
+<!--<img src="public/images/itforum.jpg"/>-->
+<!--<h1>test</h1>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, voluptatibus.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</blog>-->
+
+
+<footer>
+    <div class="footer-container">
+        <div class="logo-and-copyright">
+            <h1 class="logo">IT
+                <span>Company</span>
+            </h1>
+            <br>
+            <p> @ 2018:ItCompany All Rights Reserved.</p>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="phones">
+            <span>Телефоны:</span>
+            <p><a href="tel:+375 29 370 09 13">+375 29 370 09 13</a></p>
+            <p><a href="tel:+375 25 370 09 13">+375 25 370 09 13</a></p>
+            <p><a href="tel:+375 33 370 09 13">+375 33 370 09 13</a></p>
+        </div>
+        <div class="e-mails">
+            <span>E-mail:</span>
+            <p><a href="mailto:speekerby@live.ru">speekerby@live.ru</a></p>
+            <span>E-mail:</span>
+            <p><a href="mailto:itstep@gmail.com">itstep@gmail.com</a></p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/build/build.js"></script>
 
 </body>
 

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title><?php echo $title; ?></title>
-    <link rel="stylesheet" href="/build/style.css">
+    <link rel="stylesheet" href="/build/styles.css">
     <link href="/public/styles/bootstrap.css" rel="stylesheet">
-    <link href="/public/styles/main.css" rel="stylesheet">
+    <!--    <link href="/public/styles/main.css" rel="stylesheet">-->
     <link href="/public/styles/font-awesome.css" rel="stylesheet">
 
 </head>
@@ -33,7 +33,48 @@
 
 <?php echo $content; ?>
 
-<!--<script src="/build/build.js"></script>-->
+<footer>
+    <div class="footer-container">
+        <div class="logo-and-copyright">
+            <h1 class="logo">IT
+                <span>Company</span>
+            </h1>
+            <br>
+            <p> @ 2018:ItCompany All Rights Reserved.</p>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="phones">
+            <span>Телефоны:</span>
+            <p><a href="tel:+375 29 370 09 13">+375 29 370 09 13</a></p>
+            <p><a href="tel:+375 25 370 09 13">+375 25 370 09 13</a></p>
+            <p><a href="tel:+375 33 370 09 13">+375 33 370 09 13</a></p>
+        </div>
+        <div class="e-mails">
+            <span>E-mail:</span>
+            <p><a href="mailto:speekerby@live.ru">speekerby@live.ru</a></p>
+            <span>E-mail:</span>
+            <p><a href="mailto:itstep@gmail.com">itstep@gmail.com</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="/build/build.js"></script>
+
 </body>
 </html>
 
