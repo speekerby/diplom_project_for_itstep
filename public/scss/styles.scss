@@ -189,7 +189,7 @@ slider
 .da-slide {
   //padding: 25.2% 0%;
   padding-top: 15%;
-  padding-bottom: 17.4%;
+  padding-bottom: 20.4%;
 }
 
 .da-slide h2 {
@@ -332,20 +332,13 @@ footer {
   }
 }
 
-contact {
-  hr {
-    display: inline-block;
-    border: none; /* Убираем границу для браузера Firefox */
-    background-color: $green; /* Цвет линии для браузера Firefox и Opera */
-    height: 2px; /* Толщина линии */
-    width: 94px;
-    color: $green;
-  }
+.contact {
   .container-contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 59%;
-    margin: 0 auto;
+    margin: 20px auto;
+
   }
   .form-control {
     background-color: #f8f8f8;
@@ -359,6 +352,46 @@ contact {
     border: 0;
     padding: 15px;
     border-radius: 22px;
+  }
+}
+
+.count_bg {
+  background-color: #f6f6f5;
+  padding: 37px;
+}
+
+#content-home {
+  .about {
+    //background-color: #f6f6f5;
+    padding: 37px;
+    p {
+      padding: 0px 24%;
+      text-align: center;
+      font-size: 19px;
+    }
+  }
+  .logo-cart {
+    text-align: center;
+  }
+
+  .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container-cart {
+      display: grid;
+      //width: 800px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 150px);
+      grid-column-gap: 8rem;
+      text-align: center;
+    }
+    //img {
+    //  opacity: 0.4;
+    //}
+    //&:hover {
+    //opacity: 1;
+    //}
   }
 }
 

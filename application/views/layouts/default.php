@@ -40,21 +40,21 @@
                 <span>Company</span>
             </h1>
             <br>
-            <p> @ 2018:ItCompany All Rights Reserved.</p>
+            <p> @2018 : ItCompany All Rights Reserved.</p>
         </div>
         <div class="footer-menu">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="/about">About</a>
                 </li>
                 <li>
-                    <a href="">Blog</a>
+                    <a href="/blog">Blog</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="/contact">Contact</a>
                 </li>
             </ul>
         </div>

@@ -3,7 +3,22 @@ html, body {
   padding: 0;
 }
 
+h1 {
+  margin: 0 auto;
+}
 li {
   list-style: none;
 }
 
+main {
+  min-height: calc(70.3vh);
+}
+
+hr {
+  display: inline-block;
+  border: none; /* Убираем границу для браузера Firefox */
+  background-color: $green; /* Цвет линии для браузера Firefox и Opera */
+  height: 2px; /* Толщина линии */
+  width: 94px;
+  color: $green;
+}
