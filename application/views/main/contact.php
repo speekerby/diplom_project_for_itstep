@@ -1,21 +1,3 @@
-<!--<form action="/contact" method="post">-->
-<!--    <label for="name">-->
-<!--        <input type="text" placeholder="Имя" name="name">-->
-<!--    </label>-->
-<!--    <br>-->
-<!--    <label for="e-mail">-->
-<!--        <input type="text" placeholder="E-mail" name="e-mail">-->
-<!--    </label>-->
-<!--    <br>-->
-<!--    <label for="text">-->
-<!--        <textarea name="text" rows="5"></textarea>-->
-<!--    </label>-->
-<!--    <br>-->
-<!--    <button type="submit">Отправить</button>-->
-<!--</form>-->
-<!---->
-<!--<link href="/public/styles/bootstrap.css" rel="stylesheet">-->
-
 
 <main>
     <div class="contact">
@@ -23,15 +5,15 @@
             <div class="contacts">
                 <h1>Контакты:</h1>
                 <hr>
-                <p>22 St. Black Road Raleigh, PA 34578</p>
+                <p>Пушкина, 2, Гомель 246050</p>
                 <span>Телефоны:</span>
                 <p><a href="tel:+375 29 370 09 13">+375 29 370 09 13</a></p>
                 <p><a href="tel:+375 25 370 09 13">+375 25 370 09 13</a></p>
                 <p><a href="tel:+375 33 370 09 13">+375 33 370 09 13</a></p>
-                <p>Opening Hours</p>
-                <p> Monday – Friday: 9am-6pm</p>
-                <p> Saturday: 10am-4pm</p>
-                <p>Sunday: 10am-1pm</p>
+                <p>Время работы:</p>
+                <p>Понедельник - пятница: с 9:00 до 18:00</p>
+                <p>Суббота: с 10:00 до 16:00</p>
+                <p>Воскресенье: с 10:00 до 17:00</p>
             </div>
             <div class="form-contact">
                 <h1>Свяжись с нами</h1>
@@ -52,42 +34,6 @@
 </main>
 
 
-<!--<div class="container p-5">-->
-<!--    <div class="row">-->
-<!--        <div class="col-lg-8 col-md-10 mx-auto ">-->
-<!--            <form action="/contact" method="post">-->
-<!--                <div class="control-group">-->
-<!--                    <div class="form-group floating-label-form-group controls">-->
-<!--                        <p><input type="text" class="form-control" name="name" placeholder="Имя"></p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="control-group">-->
-<!--                    <div class="form-group floating-label-form-group controls">-->
-<!--                        <p><input type="text" class="form-control" name="email" placeholder="E-mail"></p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="control-group">-->
-<!--                    <div class="form-group floating-label-form-group controls">-->
-<!--                        <p><textarea rows="5" class="form-control" name="text" placeholder="Сообщение"></textarea></p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <br>-->
-<!--                <div id="success"></div>-->
-<!--                <div class="form-group">-->
-<!--                    <button type="submit" class="btn btn-secondary" id="sendMessageButton">Отправить</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 
 <script src="/public/scripts/jquery.js"></script>
 <script src="/public/js/form.js"></script>
-
-<!--
-    background-color: #f8f8f8;
-    border: 0;
-        border-radius: 4px;
-padding: 15px 60% 15px 10px;
-
--->

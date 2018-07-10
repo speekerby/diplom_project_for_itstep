@@ -92,6 +92,7 @@ class admin extends Model
         return $this->db->column('SELECT id FROM posts WHERE id=:id', $params);
     }
 
+    //Удаление поста
     public function postDelete($id)
     {
         $params = [

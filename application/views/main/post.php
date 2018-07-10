@@ -1,3 +1,5 @@
+<link href="/public/styles/bootstrap.css" rel="stylesheet">
+
 <header class="masthead" style="background-image: url('/public/images/blog/<?php echo $data['id']; ?>.jpg')">
     <div class="container">
         <div class="row">
