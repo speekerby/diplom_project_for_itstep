@@ -6,7 +6,7 @@
         <span style="font-size: 46px; border-bottom: 6px solid green;">БЛОГ</span>
     </div>
 
-    <div class="container-blog">
+    <div class="container-blog" style="min-height: calc(60.1vh);">
         <?php if (empty($list)): ?>
             <p>Список постов пуст</p>
         <?php else: ?>

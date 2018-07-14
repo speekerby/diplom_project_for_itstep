@@ -1,4 +1,4 @@
-<p>О нас</p>
+<p style="min-height: calc(66.9vh);">В разработке...</p>
 <?php
 /**
  * Created by PhpStorm.

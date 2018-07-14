@@ -44,6 +44,7 @@ class AdminController extends controller
         $this->view->redirect('admin/login');
     }
 
+    //Добавление поста
     public function addAction()
     {
         if (!empty($_POST)) {
@@ -66,6 +67,7 @@ class AdminController extends controller
         $this->view->render('Добавить пост');
     }
 
+    //Редактирование поста
     public function editAction()
     {
         //Проверка на ID
@@ -80,6 +82,7 @@ class AdminController extends controller
 
             $this->model->postEdit($_POST, $this->route['id']);
 
+            //Загрузка изображения
             if ($_FILES['img']['tmp_name']) {
                 $this->model->postUploadImage($_FILES['img']['tmp_name'], $this->route['id']);
             }
@@ -94,6 +97,7 @@ class AdminController extends controller
         $this->view->render('Редактировать пост', $vars);
     }
 
+    //Вывод постов
     public function postsAction()
     {
         $mainModel = new main();
@@ -105,6 +109,7 @@ class AdminController extends controller
         $this->view->render('Посты', $vars);
     }
 
+    //Удаление поста
     public function deleteAction()
     {
         if (!$this->model->isPostExists($this->route['id'])) {

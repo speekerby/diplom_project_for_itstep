@@ -57,7 +57,8 @@
     </footer>
 <?php endif; ?>
 
-<script src="/public/scripts/jquery.js"></script>
-<script src="/public/js/form.js"></script>
+<script src="/build/build.js"></script>
+<!--<script src="/public/scripts/jquery.js"></script>-->
+<!--<script src="/public/js/form.js"></script>-->
 </body>
 </html>

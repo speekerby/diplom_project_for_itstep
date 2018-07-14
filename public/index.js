@@ -1,13 +1,6 @@
 //JQUERY
 import $ from 'jquery';
 
-
-// import './js/form.js';
-
-//Swiper
-// import 'swiper/dist/css/swiper.min.css';
-// import 'swiper/dist/js/swiper.js';
-
 //SCSS
 import './scss/styles.scss'
 
@@ -29,5 +22,28 @@ $('.count').each(function () {
         step: function (now) {
             $(this).text(Math.ceil(now))
         }
+    });
+});
+//Форма обратной связи
+$(document).ready(function () {
+    $('form').submit(function (event) {
+        let json;
+        event.preventDefault();
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (result) {
+                json = jQuery.parseJSON(result);
+                if (json.url) {
+                    window.location.href = '/' + json.url;
+                } else {
+                    alert(json.status + '  ' + json.message);
+                }
+            },
+        });
     });
 });
