@@ -1,7 +1,5 @@
 <?php
 
-require 'application/lib/Developer.php';
-
 use application\core\Router;
 
 //Функция автозагрузки классов
